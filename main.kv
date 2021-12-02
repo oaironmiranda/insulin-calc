@@ -1,0 +1,34 @@
+Screen:
+    MDTextField:
+        id: num
+        hint_text: "Glucose"
+        icon_right: 'water'
+        icon_right_color: (1,0,0,1)
+        size_hint_x: None
+        width: 400
+        font_size: 32
+        pos_hint: {"center_x": .5, "center_y": .85}
+        mode: "rectangle"
+        max_text_length: 3
+        input_filter: "int"
+
+    MDLabel:
+        id: label
+        text: "WELCOME"
+        halign: "center"
+        font_style: 'Button'
+        font_size: 32
+
+    MDRectangleFlatButton:
+        text: "Submit"
+        font_size: 32
+        pos_hint: {"center_x": .5, "center_y": .25}
+        on_release: app.calc()
+
+    MDBottomAppBar:
+        MDToolbar:
+            title: "Insulin Calculator"
+            icon: 'invert-colors'
+            type: 'bottom'
+            mode: 'end'
+            on_action_button: app.mode()
